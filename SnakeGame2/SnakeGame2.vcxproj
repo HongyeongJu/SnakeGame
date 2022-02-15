@@ -141,8 +141,10 @@
   <ItemGroup>
     <ClCompile Include="KeyBoard.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="System.cpp" />
+    <ClCompile Include="TextColor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commonHeader.h" />
@@ -154,6 +156,7 @@
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="System.h" />
+    <ClInclude Include="TextColor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

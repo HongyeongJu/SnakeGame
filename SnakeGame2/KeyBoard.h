@@ -6,12 +6,14 @@
 #include <iostream>
 
 class KeyBoard {
+	static bool isWorking;
 public :
 	static int input1;
 	static int input2;
 
 	static void InsertKeyboard();
-
+	static void inputsToZero();
+	static void stopInput();
 };
 
 #endif

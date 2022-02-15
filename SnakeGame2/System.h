@@ -5,7 +5,9 @@
 
 #include "Sound.h"
 #include "KeyBoard.h"
+#include "Menu.h"
 #include <thread>
+#include <conio.h>
 
 class System {
 private:
@@ -28,6 +30,9 @@ private:
 	// 키보드 스레드 객체
 	std::thread *t_keyboard;
 
+	// 메뉴 객체
+	Menu menu;
+
 public:
 	// 생성자
 	System();
@@ -41,6 +46,9 @@ public:
 
 	// 소멸자
 	~System();
+
+	// 시스템 상태
+	bool isPlaying();
 };
 
 
