@@ -4,6 +4,7 @@ int KeyBoard::input1 = 0;
 int KeyBoard::input2 = 0;
 bool KeyBoard::isWorking = true;
 
+// 키보드 값을 입력하는 함수
 void KeyBoard::InsertKeyboard() {
 	while (isWorking) {
 		input1 = _getch();
@@ -21,14 +22,18 @@ void KeyBoard::InsertKeyboard() {
 		else {
 			input2 = 0;
 		}
+
+		//std::cout << input1 << "  " << input2 << "  " << std::endl;
 	}
 
 }
 
+// 입력을 멈추는 함수
 void KeyBoard::stopInput() {
 	isWorking = false;
 }
 
+// 입력값을 0으로 초기화 하는 함수
 void KeyBoard::inputsToZero()
 {
 	input1 = 0;

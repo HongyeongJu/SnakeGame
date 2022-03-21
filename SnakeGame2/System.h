@@ -5,18 +5,16 @@
 
 #include "Sound.h"
 #include "KeyBoard.h"
+#include "Enum.h"
 #include "Menu.h"
+#include "Game.h"
+#include "GameOver.h"
+#include <Windows.h>
 #include <thread>
 #include <conio.h>
 
 class System {
 private:
-	// 프로그램은 총 메뉴모드, 게임모드, 랭킹모드 3가지로 이루어진다.
-	enum class MODE {
-		MENU,
-		GAME,
-		RANKING
-	};
 
 	// 현재 프로그램 모드
 	MODE nowMode;
@@ -32,6 +30,12 @@ private:
 
 	// 메뉴 객체
 	Menu menu;
+
+	// 게임 객체
+	Game game;
+	
+	// 게임 오버 객체
+	GameOver gameover;
 
 public:
 	// 생성자
@@ -49,6 +53,9 @@ public:
 
 	// 시스템 상태
 	bool isPlaying();
+
+	// 커서 뷰 설정
+	void CursorView(bool TrueOrFalse);
 };
 
 
